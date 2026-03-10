@@ -40,8 +40,8 @@ body {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: rgba(92, 125, 45, 0.6) !important;
-  box-shadow: 0 0 0 2px rgba(92, 125, 45, 0.1);
+  border-color: rgba(212, 175, 55, 0.6) !important;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -51,16 +51,15 @@ textarea:focus {
   .form-grid {
     grid-template-columns: 1fr !important;
   }
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .gallery-columns {
-    columns: 2 !important;
-  }
   .nav-links {
     display: none !important;
   }
   .hamburger {
     display: block !important;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-columns {
+    columns: 2 !important;
   }
 }
