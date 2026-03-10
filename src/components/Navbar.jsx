@@ -102,6 +102,7 @@ export default function Navbar() {
           background: 'none', border: 'none',
           color: '#c9a84c', fontSize: '1.8rem',
           cursor: 'pointer', display: 'none',
+          marginLeft: 'auto',
         }}
       >
         {menuOpen ? '✕' : '☰'}
