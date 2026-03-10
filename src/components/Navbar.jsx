@@ -38,18 +38,19 @@ export default function Navbar() {
           fontFamily: "'Playfair Display', serif",
           fontSize: '1.5rem',
           fontWeight: 700,
-          color: '#ffff',
+          color: '#ffffff',
           letterSpacing: '0.05em',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.6rem',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <img
-            src="/images/Logo.png"
-            alt="logo"
-            style={{ width: '45px', height: '45px', objectFit: 'contain' }}
-          />
-          AmakaBeautyEmpire
-        </div>
+        <img
+          src="/images/Logo.png"
+          alt="logo"
+          style={{ width: '45px', height: '45px', objectFit: 'contain' }}
+        />
+        AmakaBeautyEmpire
       </div>
 
       <ul className="nav-links" style={{
@@ -102,7 +103,7 @@ export default function Navbar() {
           background: 'none', border: 'none',
           color: '#c9a84c', fontSize: '1.8rem',
           cursor: 'pointer', display: 'none',
-          marginLeft: 'auto',
+          padding: 0, lineHeight: 1,
         }}
       >
         {menuOpen ? '✕' : '☰'}
@@ -111,10 +112,10 @@ export default function Navbar() {
       {menuOpen && (
         <div style={{
           position: 'absolute', top: '100%', left: 0, right: 0,
-          background: '#5C7D2D',
-          padding: '1rem', display: 'flex',
-          flexDirection: 'column', gap: '1rem',
-          borderBottom: '1px solid rgba(92,125,45,0.3)',
+          background: '#1a2e0d',
+          padding: '0.5rem 0',
+          display: 'flex',
+          flexDirection: 'column',
         }}>
           {NAV_LINKS.map((section) => (
             <button
@@ -122,15 +123,41 @@ export default function Navbar() {
               onClick={() => { scrollTo(section); setMenuOpen(false) }}
               style={{
                 background: 'none', border: 'none',
-                color: '#f0e6d3', fontSize: '1rem',
+                borderBottom: 'none',
+                color: '#f0e6d3', fontSize: '0.95rem',
                 textTransform: 'uppercase', letterSpacing: '0.1em',
-                cursor: 'pointer', padding: '0.5rem',
+                cursor: 'pointer', padding: '0.9rem 2rem',
                 fontFamily: 'inherit', textAlign: 'left',
+                transition: 'background 0.2s, color 0.2s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(92,125,45,0.2)'
+                e.currentTarget.style.color = '#c9a84c'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'none'
+                e.currentTarget.style.color = '#f0e6d3'
               }}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </button>
           ))}
+
+          <div style={{ padding: '0.75rem 2rem 1rem' }}>
+            <button
+              onClick={() => { scrollTo('contact'); setMenuOpen(false) }}
+              style={{
+                width: '100%', padding: '0.75rem',
+                background: '#5C7D2D', color: '#fff',
+                border: 'none', borderRadius: '30px',
+                fontFamily: 'inherit', fontSize: '0.85rem',
+                fontWeight: 700, letterSpacing: '0.1em',
+                textTransform: 'uppercase', cursor: 'pointer',
+              }}
+            >
+              Book Now
+            </button>
+          </div>
         </div>
       )}
     </nav>
