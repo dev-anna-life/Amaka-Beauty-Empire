@@ -138,7 +138,7 @@ export default function Footer() {
       <p style={{ color: 'rgba(240,230,211,0.2)', fontSize: '0.7rem' }}>
         Designed & Built by{' '}
         <span style={{
-          color: '#c9a84c', opacity: 0.8,
+          color: '#ffff', opacity: 0.8,
           fontWeight: 600, letterSpacing: '0.05em',
         }}>
           Dev Anna
