@@ -14,7 +14,7 @@ export const SERVICES = [
     category: "nails",
     icon: "✨",
     name: "Gel Polish",
-    desc: "Chip-free shine that lasts 2–3 weeks. Available in 80+ colours.",
+    desc: "Chip-free shine that lasts 2-3 weeks. Available in 80+ colours.",
     price: "₦5,000",
     duration: "1 hr",
     image: "/images/Gel-Polish.jpg",
@@ -112,7 +112,7 @@ export const SERVICES = [
   {
     id: 12,
     category: "makeup",
-    icon: "🎭",
+    icon: "💑",
     name: "Aso-Ebi Glam",
     desc: "Perfect makeup for owambes, weddings and Nigerian celebrations. Vibrant and bold.",
     price: "₦12,000",

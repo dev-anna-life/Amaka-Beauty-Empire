@@ -99,7 +99,7 @@ export default function About() {
               fontSize: "0.95rem",
             }}
           >
-            Hi! I'm Amaka — a certified nail technician and hair braiding
+            Hi! I'm Amaka a certified nail technician and hair braiding
             specialist and professional makeup artist based in Nigeria with over
             5 years of experience turning beauty visions into reality. I've
             trained under some of the best in the industry and am passionate
